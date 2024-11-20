@@ -1,0 +1,49 @@
+{
+	"name": "Hoja de eventos 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "BotónGO",
+					"sid": 407615095803636
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 383576118492465,
+					"parameters": {
+						"layout": "Escena 2"
+					}
+				}
+			],
+			"sid": 379312904504267
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-drag-start",
+					"objectClass": "Texto1",
+					"sid": 447410049490249,
+					"behaviorType": "ArrastrarYSoltar"
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 238815100162194,
+					"parameters": {
+						"layout": "Escena 2"
+					}
+				}
+			],
+			"sid": 473293475867364
+		}
+	],
+	"sid": 224810881579934
+}
