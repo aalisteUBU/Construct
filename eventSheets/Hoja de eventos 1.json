@@ -2,48 +2,547 @@
 	"name": "Hoja de eventos 1",
 	"events": [
 		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-clicked",
-					"objectClass": "BotónGO",
-					"sid": 407615095803636
-				}
-			],
-			"actions": [
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 383576118492465,
-					"parameters": {
-						"layout": "Escena 2"
-					}
-				}
-			],
-			"sid": 379312904504267
+			"eventType": "variable",
+			"name": "VAR_ACIERTOS",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 290525994139231
+		},
+		{
+			"eventType": "variable",
+			"name": "VAR_VIDA",
+			"type": "number",
+			"initialValue": "2",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 547111776737320
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-drag-start",
-					"objectClass": "Texto1",
-					"sid": 447410049490249,
-					"behaviorType": "ArrastrarYSoltar"
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 238528655247881
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "txt_aciertos",
+					"sid": 701295980125410,
+					"parameters": {
+						"text": "VAR_ACIERTOS"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "txt_vida",
+					"sid": 611929808991359,
+					"parameters": {
+						"text": "VAR_VIDA"
+					}
+				}
+			],
+			"sid": 274541857512142
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 638919622822712,
+					"parameters": {
+						"variable": "VAR_VIDA",
+						"comparison": 0,
+						"value": "0"
+					}
 				}
 			],
 			"actions": [
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 238815100162194,
+					"sid": 620701727137394,
 					"parameters": {
-						"layout": "Escena 2"
+						"layout": "Escena_intro"
 					}
 				}
 			],
-			"sid": 473293475867364
+			"sid": 520088519613768
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 439022876277700,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Texto_HOLA"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 519797296434656,
+					"parameters": {
+						"layout": "Escena 1"
+					}
+				}
+			],
+			"sid": 497425016177653
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 207900684541918,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "txt_close"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "close",
+					"objectClass": "Navegador",
+					"sid": 463806933842439
+				}
+			],
+			"sid": 372407553273111
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-text",
+					"objectClass": "TXT_COOLER",
+					"sid": 551622825911816,
+					"parameters": {
+						"text": "\"cooler\"",
+						"case": "case-insensitive"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 176861010105111
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "cpu_cooler",
+					"sid": 585437697080015,
+					"behaviorType": "ArrastrarYSoltar",
+					"parameters": {
+						"state": "enabled"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 689427171224189,
+					"parameters": {
+						"variable": "VAR_ACIERTOS",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "TXT_COOLER",
+					"sid": 172777650580192,
+					"parameters": {
+						"text": "\"Cooler\""
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "TXT_COOLER",
+					"sid": 524978937706901,
+					"parameters": {
+						"mode": "disabled"
+					}
+				}
+			],
+			"sid": 205530233956027
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-text",
+					"objectClass": "TXT_PLACA",
+					"sid": 357750401463199,
+					"parameters": {
+						"text": "\"placa base\"",
+						"case": "case-insensitive"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 613253366672814
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "Placa_base",
+					"sid": 829225877618894,
+					"behaviorType": "ArrastrarYSoltar",
+					"parameters": {
+						"state": "enabled"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 579815414279994,
+					"parameters": {
+						"variable": "VAR_ACIERTOS",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "TXT_PLACA",
+					"sid": 622007552277706,
+					"parameters": {
+						"text": "\"Placa Base\""
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "TXT_PLACA",
+					"sid": 765021367552244,
+					"parameters": {
+						"mode": "disabled"
+					}
+				}
+			],
+			"sid": 554346639502848
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Placa_base",
+					"sid": 300275201671059,
+					"parameters": {
+						"object": "Sprite"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-imagepoint",
+					"objectClass": "Placa_base",
+					"sid": 386793562700782,
+					"behaviorType": "Pegado",
+					"parameters": {
+						"pin-to": "Sprite",
+						"image-point": "0",
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				}
+			],
+			"sid": 373012263568435
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "cpu_cooler",
+					"sid": 417744098497699,
+					"parameters": {
+						"object": "Sprite2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-imagepoint",
+					"objectClass": "cpu_cooler",
+					"sid": 639363459263871,
+					"behaviorType": "Pegado",
+					"parameters": {
+						"pin-to": "Sprite2",
+						"image-point": "0",
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				}
+			],
+			"sid": 595008536125961
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 313057988930415,
+					"parameters": {
+						"variable": "VAR_ACIERTOS",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Sprite3",
+					"sid": 747117973194962,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "texto02",
+					"sid": 129744533670859,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "txt_vida",
+					"sid": 338501192459830,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 655786759189490
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 285625028837171,
+					"parameters": {
+						"key": 39
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Sprite3",
+					"sid": 882722381688748,
+					"parameters": {
+						"animation": "\"ANI_RUN_R\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 301558918134332
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 724222526376600,
+					"parameters": {
+						"key": 37
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Sprite3",
+					"sid": 249353974190367,
+					"parameters": {
+						"animation": "\"ANI_RUN_L\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 925057336140328
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 670803113837654,
+					"parameters": {
+						"key": 38
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Sprite3",
+					"sid": 947860181925963,
+					"parameters": {
+						"animation": "\"ANI_GLASS\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 979938080743138
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-key-released",
+					"objectClass": "Teclado",
+					"sid": 212911705233932
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Sprite3",
+					"sid": 243207067985277,
+					"parameters": {
+						"animation": "\"idle\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 413490874217680
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Sprite3",
+					"sid": 899719750203968,
+					"parameters": {
+						"object": "death_collider"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 427388231414140
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 475074232795602,
+					"parameters": {
+						"variable": "VAR_VIDA",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Sprite3",
+					"sid": 358425053966010,
+					"parameters": {
+						"x": "203",
+						"y": "71"
+					}
+				}
+			],
+			"sid": 635416405089840
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Sprite3",
+					"sid": 956699825134386,
+					"parameters": {
+						"object": "Placa_base"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-imagepoint",
+					"objectClass": "Placa_base",
+					"sid": 938591478786086,
+					"behaviorType": "Pegado",
+					"parameters": {
+						"pin-to": "Sprite",
+						"image-point": "0",
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Plan6",
+					"sid": 484708658816251,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 669367600048969
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Sprite3",
+					"sid": 321090264914065,
+					"parameters": {
+						"object": "cpu_cooler"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-imagepoint",
+					"objectClass": "cpu_cooler",
+					"sid": 681557171841244,
+					"behaviorType": "Pegado",
+					"parameters": {
+						"pin-to": "Sprite",
+						"image-point": "0",
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				}
+			],
+			"sid": 746110516399822
 		}
 	],
-	"sid": 224810881579934
+	"sid": 750215568216511
 }

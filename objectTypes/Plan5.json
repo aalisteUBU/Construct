@@ -1,0 +1,39 @@
+{
+	"name": "Plan5",
+	"plugin-id": "Sprite",
+	"sid": 409436644505515,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 386,
+						"height": 94,
+						"originX": 0.29015544041450775,
+						"originY": 1.5638297872340425,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5678941,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 439866672722761,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

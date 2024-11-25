@@ -1,0 +1,55 @@
+{
+	"name": "Placa_base",
+	"plugin-id": "Sprite",
+	"sid": 174836415213006,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "ArrastrarYSoltar",
+			"sid": 982078054455648
+		},
+		{
+			"behaviorId": "Pin",
+			"name": "Pegado",
+			"sid": 507169396752836
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Sólido",
+			"sid": 955045959608988
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 601,
+						"height": 756,
+						"originX": 0.5166389351081531,
+						"originY": 0.5013227513227513,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6002480,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 321428806450050,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
