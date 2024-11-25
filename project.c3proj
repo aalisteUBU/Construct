@@ -1,15 +1,36 @@
 {
 	"projectFormatVersion": 1,
 	"savedWithRelease": 41600,
-	"name": "Nuevo proyecto",
+	"name": "montarpcio",
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "Browser",
+			"name": "Navegador",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Button",
 			"name": "Botón",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Teclado",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -28,20 +49,67 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "TextBox",
+			"name": "Entrada de texto",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "DragnDrop",
 			"name": "Arrastrar y soltar",
 			"author": "Scirra",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pin",
+			"name": "Pegado",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Platform",
+			"name": "Plataforma",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Sólido",
+			"author": "Scirra",
+			"bundled": false
 		}
 	],
-	"uniqueId": "nbvz2r03vqx",
+	"uniqueId": "sy6e0r2f8pa",
 	"objectTypes": {
 		"items": [
-			"Fondo",
-			"Texto1",
-			"BotónGO",
-			"Plan"
+			"cpu_cooler",
+			"Placa_base",
+			"ATX_Case",
+			"Texto",
+			"Texto2",
+			"TXT_COOLER",
+			"TXT_PLACA",
+			"Texto_HOLA",
+			"Botón",
+			"Sprite",
+			"Sprite2",
+			"Mouse",
+			"Navegador",
+			"txt_close",
+			"Sprite3",
+			"Texto3",
+			"text_aciertos",
+			"Teclado",
+			"Plan",
+			"Plan2",
+			"Plan3",
+			"Plan4",
+			"Plan5"
 		],
 		"subfolders": []
 	},
@@ -54,7 +122,7 @@
 	"layouts": {
 		"items": [
 			"Escena 1",
-			"Escena 2"
+			"Escena_intro"
 		],
 		"subfolders": []
 	},
@@ -90,7 +158,7 @@
 				{
 					"name": "icono-16.png",
 					"type": "image/png",
-					"sid": 208389861272088,
+					"sid": 137788665155750,
 					"icon-info": {
 						"purpose": "app-icon"
 					}
@@ -98,15 +166,7 @@
 				{
 					"name": "icono-32.png",
 					"type": "image/png",
-					"sid": 449775126726009,
-					"icon-info": {
-						"purpose": "app-icon"
-					}
-				},
-				{
-					"name": "icono-128.png",
-					"type": "image/png",
-					"sid": 290446247218398,
+					"sid": 529809539029896,
 					"icon-info": {
 						"purpose": "app-icon"
 					}
@@ -114,7 +174,15 @@
 				{
 					"name": "icono-64.png",
 					"type": "image/png",
-					"sid": 816848568601271,
+					"sid": 429141116223411,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icono-128.png",
+					"type": "image/png",
+					"sid": 577344618729231,
 					"icon-info": {
 						"purpose": "app-icon"
 					}
@@ -122,7 +190,7 @@
 				{
 					"name": "icono-256.png",
 					"type": "image/png",
-					"sid": 880072294628761,
+					"sid": 925889190811718,
 					"icon-info": {
 						"purpose": "app-icon"
 					}
@@ -130,7 +198,7 @@
 				{
 					"name": "icono-512.png",
 					"type": "image/png",
-					"sid": 165381873895414,
+					"sid": 525673764363155,
 					"icon-info": {
 						"purpose": "app-icon"
 					}
@@ -138,7 +206,7 @@
 				{
 					"name": "logo-carga.png",
 					"type": "image/png",
-					"sid": 226782252872327,
+					"sid": 229174317143581,
 					"icon-info": {
 						"purpose": "loading-logo"
 					}
@@ -169,16 +237,16 @@
 	"properties": {
 		"description": "",
 		"version": "1.0.0.0",
-		"author": "",
+		"author": "AlvaroAR",
 		"authorEmail": "",
 		"authorWebsite": "",
 		"appId": "",
-		"pixelRounding": true,
+		"pixelRounding": false,
 		"zAxisScale": "normalized",
 		"fov": 0.7853981633974483,
 		"useLoaderLayout": false,
 		"fullscreenMode": "letterbox-scale",
-		"fullscreenQuality": "low",
+		"fullscreenQuality": "high",
 		"viewportFit": "auto",
 		"backgroundColor": [
 			0,
@@ -199,7 +267,7 @@
 			1,
 			0
 		],
-		"orientations": "portrait",
+		"orientations": "landscape",
 		"webgpu": "auto",
 		"gpuPreference": "high-performance",
 		"scriptsType": "module",
@@ -218,7 +286,7 @@
 		"exportFileStructure": "folders",
 		"uidAllocationMode": "increment"
 	},
-	"viewportWidth": 720,
-	"viewportHeight": 1280,
-	"firstLayout": null
+	"viewportWidth": 1920,
+	"viewportHeight": 1080,
+	"firstLayout": "Escena_intro"
 }
